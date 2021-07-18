@@ -63,4 +63,9 @@
 
   });
 
+  searchInput.addEventListener("blur", function(event) {
+    searchResults.classList.add("fizz-is-hidden");
+  });
+
+
 })();
