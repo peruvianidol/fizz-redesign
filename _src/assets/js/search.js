@@ -21,10 +21,7 @@
     for(var item in searchIndex ) {
       var found = searchIndex[item].text.indexOf(str);
       if(found != -1 ) {
-        results.push(searchIndex[item])
-        searchResults.classList.remove('fizz-is-hidden');
-      } else {
-        searchResults.classList.add('fizz-is-hidden');
+        results.push(searchIndex[item]);
       }
     }
 
@@ -55,7 +52,12 @@
         find(str);
       } else {
         clearResults();
-        searchResults.classList.add('fizz-is-hidden');
+      }
+      
+      if (searchResults.childElementCount > 0) {
+        searchResults.classList.remove("fizz-is-hidden");
+      } else {
+        searchResults.classList.add("fizz-is-hidden");
       }
     });
 
