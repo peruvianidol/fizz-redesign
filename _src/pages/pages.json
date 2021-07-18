@@ -1,4 +1,4 @@
 {
-  "layout": "base",
-  "permalink": "/{{ page.fileSlug }}/index.html"
+  "layout": "two-column",
+  "permalink": "/{{ page.fileSlug }}/"
 }

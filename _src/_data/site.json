@@ -1,7 +1,8 @@
 {
-  "name": "11ty Starter",
-  "url": "localhost:8080",
+  "name": "Fizz Design System",
+  "url": "https://provi.fizz/netlify.app/",
   "authorName": "Mike Aparicio",
-  "description": "A basic boilerplate for getting a new Eleventy site up and running.",
-  "favicon": "/assets/images/favicon.svg"
+  "authorEmail": "mike.aparicio@provi.com",
+  "description": "Provi's Design System, Fizz, is a common language across design, engineering and product that describes how we create digital products at Provi.",
+  "favicon": "/assets/meta/favicon.svg"
 }

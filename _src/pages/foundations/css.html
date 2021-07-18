@@ -1,0 +1,120 @@
+---
+title: "CSS"
+description: "Fizz uses a methodology called COOL CSS."
+---
+
+
+<p>Fizz's CSS framework is designed to allow you to compose just about any design without having to add many additional styles on top of it (if at all). Fizz has three pillars of styles, inspired by Andy Bell's <a href="https://piccalil.li/blog/cube-css/">CUBE CSS</a>:</p>
+
+<ul class="fizz-flow-16">
+  <li><strong>Component Styles</strong><br>Individual UI components are styled to be used in any context.</li>
+
+  <li><strong>Utility Styles</strong><br>These single-purpose classes allow you to compose multiple components in any number of ways without having to re-declare styles in different contexts.</li>
+
+  <li><strong>Layout Styles</strong><br>Rather than using a generic 12-column grid, Fizz provides a number of different pre-defined layouts (using CSS grid) that can be used based on the content.</p>
+</ul>
+
+<p>Let's call this the <strong>COOL</strong> (CUL) methodology. 😎</p>
+
+<h2 class="fizz-heading-2">Scope</h2>
+
+<p>Aside from some style resets and basic formatting, almost all of Fizz's styles are scoped with a <code>fizz-</code> prefix to prevent clashing with other classes.</p>
+
+<p>As we transition from existing styles to solely make use of Fizz styles, we've further scoped all of Fizz's styles inside the class <code>.fizz-styles</code>, which should be applied to the <code>&lt;body&gt;</code> or as high as possible in the DOM.</p>
+
+<h2 class="fizz-heading-2">Organization</h2>
+
+<p>The Fizz CSS framework is built in SCSS and is roughly organized using the <a href="http://www.smacss.com/">SMACSS methodology</a>, where individual files are divided into sections and compiled into a single <strong>fizz.css</strong> file using SCSS <code>@import</code>. Here's how it breaks down:</p>
+
+<h3 class="fizz-heading-3">Design Tokens</h3>
+
+<p><strong>Design Tokens</strong> serve as the single source of truth for visual style decisions in Fizz. They're organized into three categories:</p>
+
+<ul>
+<li><strong>Global Tokens</strong> include all of the possible values in the system. The color palette, type scale, spacing values, etc. If we want to change the value of our primary brand color, we can do that here and it will change everywhere that token is used. What once took us several weeks can now be done in a few seconds.</li>
+
+<li><strong>Contextual Tokens</strong> describe how Global Tokens are used. They include common values that are used across multiple components, such as <code>$color-background-brand</code>. Contextual Tokens allow us to change from one Global Token value to another across multiple components.</li>
+
+<li><strong>Component Tokens</strong> are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from blue to purple, for example — without having to edit the app styles.</li>
+</ul>
+
+<p>The tokens are included at the top of <strong>fizz.scss</strong> so that subsequent files can make use of them. They can also be included into page-specific styles (non-Fizz styles) via the npm module to take advantage of them outside of Fizz.</p>
+
+<p>For more on Design Tokens, check out the <a href="/tokens">Design Tokens</a> page.</p>
+
+<h3 class="fizz-heading-3">Base</h3>
+
+<p>The base folder includes a simple style reset based on Andy Bell's <a href="https://hankchizljaw.com/wrote/a-modern-css-reset/">A Modern CSS Reset</a>. Among other things, it resets box-sizing to border-box, removes some default padding and margins, and removes animations and transitions for users that prefer reduced motion.</p>
+
+<p>The base folder also includes some additional resets and default typographical styles. Most notably, styling for all headings is set to inherit size, line-height and font-weight from the <code>&lt;body&gt;</code>. This helps force a separation between the semantic meaning of heading elements from their visual style. If a developer wants a particular type style for a heading, they can do so by applying a class despite whichever heading level element is used.</p>
+
+<h3 class="fizz-heading-3">Components</h3>
+
+<p>This section is the meat of the styles &mdash; the <strong>C</strong> in <strong>COOL</strong>. Each individual file represents a single component or group of similar components (roughly) and their variants. This makes it easier to find styles related to a particular component.</p>
+
+<p>Component styles are named as vaguely as possible, to maximize their reuse potential. We try to avoid naming components specific to the context or the feature in which they are used.</p>
+
+<p>Components only include the styles within the components. (That is, there are no external styles like margins applied.) To arrange multiple components into a larger one, we can use <strong>Utility</strong> classes, as detailed below.</p>
+
+<h3 class="fizz-heading-3">Utilities</h3>
+
+<p><strong>Utility</strong> classes, popularized by frameworks like <a href="https://tailwindcss.com/">Tailwind</a> and <a href="https://acss.io/">Atomic CSS</a>, are single-purpose classes that can be combined to create almost any design using the system.</p>
+
+<p>Traditionally, if we had a new feature, we might use a methodology such as <a href="http://getbem.com/">BEM</a> to apply a bunch of classes specific to that feature to apply things like margins and padding within a component, and name each child element accordingly:</p>
+
+{% highlight html %}
+<figure class="product-card">
+  <img src="/img/products/1234.jpg" alt="A widget" class="product-card--image">
+  <figcaption class="product-card--info">
+    <h3 class="product-card--title">A widget</h3>
+    <p class="product-card--vendor">WidgetCo.</p>
+    <p class="product-card--description">This handy, dandy widget can do just about anything.</p>
+    <p class="product-card--price"><s class="product-card--strikethrough">$49</s> <span class="product-card--sale-price">$39</span></p>
+    <button class="product-card--button">Buy</button>
+  </figcaption>
+</figure>
+{% endhighlight %}
+
+<p>While this might offer some degree of encapsulation, it also makes it nearly impossible to use any of these styles outside the context of a product card.</p>
+
+<p>Instead, we can use a combination of <strong>Component</strong> and <strong>Utility</strong> styles to acheive the same result with more reusable classes, greatly lowering the overall size of our CSS and allowing for almost any combination within the system without having to add feature specific styles:</p>
+
+{% highlight html %}
+<figure class="fizz-card">
+  <img src="/img/products/1234.jpg" alt="A widget" class="fizz-stack-4">
+  <figcaption>
+    <h3 class="fizz-heading-3">A widget</h3>
+    <p class="fizz-text-small fizz-text-subdued">WidgetCo.</p>
+    <p class="fizz-stack-16">This handy, dandy widget can do just about anything.</p>
+    <p class="fizz-text-price fizz-text-align-right"><s>$49</s> $39</p>
+    <button class="fizz-button-primary">Buy</button>
+  </figcaption>
+</figure>
+{% endhighlight %}
+
+<p>A few things are happening here:</p>
+
+<p>Each class is describing a specific generic component or it's relationship to adjacent components. <code>.fizz-card</code>, for example, is only describing the visual properties of the card itself: its border, border radius, padding, shadows, etc.</p>
+
+<p>We don't need to specify the relationship of each child to its parent with class names. We can do that in the CSS, if necessary.</p>
+
+<p>The class names are more verbose than you'd see in something like Tailwind, but they give us a pretty good idea of what this card will look like, even without knowing anything about the visual styles of the system. We also need to apply fewer classes than a pure utility-based framework because a lot of the styles are baked into the individual components themselves and we're just using utilities to specify their relationship to each other.</p>
+
+<p>In addition to providing utilities for things like margins (<code>.fizz-stack-*</code>), Fizz has utility classes for arranging components using flexbox, and/or applying consistent margins to all direct children of an element.</p>
+
+<p>For more information, check out the <a href="/utilities">Utilities</a> page.</p>
+
+<h3 class="fizz-heading-3">Layout</h3>
+
+<p>The ubiquitous 12-column grid, popularized by frameworks such as <a href="https://getbootstrap.com/">Bootstrap</a>, tends to be overkill for most sites. It's built to make any number of combinations of columns but, in reality, we're usually only dividing the available space in half or thirds or quarters, or distributing items equally across the available space.</p>
+
+<p>Developers tend to struggle with implementing these grids, particularly when they need to be nested. And designers rarely adhere to the grid or use it sparingly.</p>
+
+<p>Instead, Fizz provides a number of different page layouts using CSS grid. As new requirements emerge and existing layouts don't suffice, we can add new layouts as needed.</p>
+
+<p>The result is a much easier method for applying layout to a page, which requires a lot less code and mental effort to implement.</p>
+
+<h3 class="fizz-heading-3">Vendor</h3>
+
+<p>This folder contains styles for any third-party styles required by the system &mdash; things like a syntax highlighting or date picker library. Rather than pull these in as a separate file, we can include them in Fizz to reduce the amount of requests.</p>
+

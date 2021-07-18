@@ -1,0 +1,47 @@
+---
+title: "Color"
+---
+
+<h2 class="fizz-heading-2" id="color-palette">Color Palette</h2>
+
+<p>Each color in the palette includes a number to help distinguish its lightness in relation to other shades of the same color. The number also allows us to make general rules about background and foreground colors to ensure there is sufficient color contrast with each pairing.</p>
+
+<table class="fizz-table fizz-text-medium fizz-table-condensed">
+  <tbody>
+    <tr>
+      <th>[color]-050 &ndash; [color]-400</th>
+      <td style="border-top: 1px solid #eaeaea;">&gt; 4.5:1 contrast ratio on black or -900 of the same shade</td>
+    </tr>
+    <tr width="100%">
+      <th>[color]-500 &ndash; [color]-900</th>
+      <td>&gt; 4.5:1 contrast ratio on white or -100 of the same shade</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Colors have specific contexts in which they're used which are included in the design tokens. You should avoid selecting colors from the palette directly and instead use Fizz's classes for applying color to text, backgrounds, icons, etc.</p>
+
+<ul class="fizz-grid fizz-align-items-end" style="--grid-col-min: calc(33% - 32px)">
+  {% for color in colors.items %}
+    <li class="palette">
+      <figure>
+        {% for shade in color.shades %} 
+          <p style="background-color: {{ shade.value }}" class="fizz-space-between" data-color-name="{{ shade.key }}">
+            <span>{{ shade.key }}</span>
+            <span>{{ shade.value }}</span>
+          </p>
+        {% endfor %}
+        <figcaption>
+          <p><strong>{{ color.name }}</strong><br>
+          {{ color.usage }}</p>
+        </figcaption>
+      </figure>
+    </li>
+  {% endfor %}
+</ul>
+
+</ul>
+
+<h2 class="fizz-heading-2" id="accessibility">Accessibility</h2>
+
+<p>Our color palette has been chose to meet or exceed color contrast ratios defined as AA in WCAG 2.1. This means the ratio of text and background colors should be at least 4.5:1, and the ratio of graphic elements and backgrounds should be at least 3.0:1.</p>

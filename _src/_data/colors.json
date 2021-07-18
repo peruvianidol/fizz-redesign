@@ -1,0 +1,264 @@
+{
+  "items" : [
+    {
+      "name" : "Gray",
+      "usage" : "Text, default states, disabled", 
+      "shades" : [
+        {
+          "key"   : "white",
+          "value" : "#FFFFFF"
+        },
+        {
+          "key"   : "gray-050",
+          "value" : "#F5F7F7"
+        },
+        {
+          "key"   : "gray-100",
+          "value" : "#EFF0F0"
+        },
+        {
+          "key"   : "gray-200",
+          "value" : "#EAEAEA"
+        },
+        {
+          "key"   : "gray-300",
+          "value" : "#D9D9D9"
+        },
+        {
+          "key"   : "gray-400",
+          "value" : "#BFBFBF"
+        },
+        {
+          "key"   : "gray-500",
+          "value" : "#848484"
+        },
+        {
+          "key"   : "gray-600",
+          "value" : "#595959"
+        },
+        {
+          "key" : "gray-700",
+          "value" : "#262626"
+        },
+        {
+          "key"   : "gray-800",
+          "value" : "#1B1B1B"
+        },
+        {
+          "key"   : "gray-900/black",
+          "value" : "#000000"
+        }
+      ]
+    },
+    {
+      "name" : "Navy",
+      "usage" : "Secondary CTA, Text", 
+      "shades" : [
+        {
+          "key"   : "navy-100",
+          "value" : "#F2F7FB"
+        },
+        {
+          "key"   : "navy-200",
+          "value" : "#CCE2F1"
+        },
+        {
+          "key"   : "navy-300",
+          "value" : "#9DC6E2"
+        },
+        {
+          "key"   : "navy-400",
+          "value" : "#69A5CE"
+        },
+        {
+          "key"   : "navy-500",
+          "value" : "#226FA4"
+        },
+        {
+          "key"   : "navy-600",
+          "value" : "#0B5384"
+        },
+        {
+          "key"   : "navy-700",
+          "value" : "#003C65"
+        },
+        {
+          "key"   : "navy-800",
+          "value" : "#002B48"
+        },
+        {
+          "key"   : "navy-900",
+          "value" : "#002036"
+        }
+      ]
+    },
+    {
+      "name" : "Teal",
+      "usage" : "Primary CTA, Links, Info", 
+      "shades" : [
+        {
+          "key"   : "teal-100",
+          "value" : "#EEFBFF"
+        },
+        {
+          "key"   : "teal-200",
+          "value" : "#CDECF5"
+        },
+        {
+          "key"   : "teal-300",
+          "value" : "#A8DCEE"
+        },
+        {
+          "key"   : "teal-400",
+          "value" : "#7FC9E2"
+        },
+        {
+          "key"   : "teal-500",
+          "value" : "#3CA9CD"
+        },
+        {
+          "key"   : "teal-600",
+          "value" : "#1F9CC6"
+        },
+        {
+          "key"   : "teal-700",
+          "value" : "#008FBE"
+        },
+        {
+          "key"   : "teal-800",
+          "value" : "#007FA9"
+        },
+        {
+          "key"   : "teal-900",
+          "value" : "#006789"
+        }
+      ]
+    },
+    {
+      "name" : "Green",
+      "usage" : "Deals, Price, Success", 
+      "shades" : [
+        {
+          "key"   : "green-100",
+          "value" : "#F1FAF5"
+        },
+        {
+          "key"   : "green-200",
+          "value" : "#D4EEE2"
+        },
+        {
+          "key"   : "green-300",
+          "value" : "#91DCB9"
+        },
+        {
+          "key"   : "green-400",
+          "value" : "#6BC89D"
+        },
+        {
+          "key"   : "green-500",
+          "value" : "#36B37E"
+        },
+        {
+          "key"   : "green-600",
+          "value" : "#009765"
+        },
+        {
+          "key"   : "green-700",
+          "value" : "#007F54"
+        },
+        {
+          "key"   : "green-800",
+          "value" : "#006644"
+        },
+        {
+          "key"   : "green-900",
+          "value" : "#00452E"
+        }
+      ]
+    },
+    {
+      "name" : "Red",
+      "usage" : "Urgency, Error", 
+      "shades" : [
+        {
+          "key"   : "red-100",
+          "value" : "#FFEEEF"
+        },
+        {
+          "key"   : "red-200",
+          "value" : "#FFCBCF"
+        },
+        {
+          "key"   : "red-300",
+          "value" : "#F9959D"
+        },
+        {
+          "key"   : "red-400",
+          "value" : "#F26D77"
+        },
+        {
+          "key"   : "red-500",
+          "value" : "#E1434F"
+        },
+        {
+          "key"   : "red-600",
+          "value" : "#CB2431"
+        },
+        {
+          "key"   : "red-700",
+          "value" : "#B81C28"
+        },
+        {
+          "key"   : "red-800",
+          "value" : "#9E1C23"
+        },
+        {
+          "key"   : "red-900",
+          "value" : "#760E14"
+        }
+      ]
+    },
+    {
+      "name" : "Yellow",
+      "usage" : "Warning, Alert", 
+      "shades" : [
+        {
+          "key"   : "yellow-100",
+          "value" : "#FFFBED"
+        },
+        {
+          "key"   : "yellow-200",
+          "value" : "#FFF6D1"
+        },
+        {
+          "key"   : "yellow-300",
+          "value" : "#FFF0B3"
+        },
+        {
+          "key"   : "yellow-400",
+          "value" : "#FFE380"
+        },
+        {
+          "key"   : "yellow-500",
+          "value" : "#FFC400"
+        },
+        {
+          "key"   : "yellow-600",
+          "value" : "#FFAB00"
+        },
+        {
+          "key"   : "yellow-700",
+          "value" : "#FF991F"
+        },
+        {
+          "key"   : "yellow-800",
+          "value" : "#FF8B00"
+        },
+        {
+          "key"   : "yellow-900",
+          "value" : "#F18200"
+        }
+      ]
+    }
+  ]
+}

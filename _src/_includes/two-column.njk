@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+<aside data-grid-area="aside">
+  <header>
+    <h1 class="fizz-text-center fizz-stack-32">
+    <a href="/"><svg class="fizz-logo"><use xlink:href="#fizz-logo"></svg></a>
+    </h1>
+  </header>
+  <nav>
+    {% for section in navigation.sections %}
+      <p class="nav-header">{{ section.title }}</p>
+      <ul class="fizz-stack-32">
+        {% for item in collections[section.tag] %}
+          <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </nav>
+</aside>
+
+<main data-grid-area="main">
+  <section class="fizz-space-between-4 fizz-border-bottom search-bar">
+    {% include "search-ui.njk" %}
+    <p class="fizz-text-medium"><a href="https://github.com/Provi-Engineering/fizz/releases"><strong>v1.0</strong></a></p>
+    <a href="https://github.com/Provi-Engineering/fizz" class="fizz-text-inherit fizz-icon-button-small"><svg class="fizz-icon-16"><use xlink:href="#icon-github"></svg></a>
+  </section>
+  
+  <article>
+    <section class="page-title fizz-border-bottom">
+      {% if description %}
+        <h2 class="page-heading fizz-stack-12">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
+        <p class="fizz-text-subdued">{{ description }}</p>
+      {% else %}
+        <h2 class="page-heading">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
+      {% endif %}
+    </section>
+    <section class="fizz-flow-32 main-content">
+
+      {{ content | safe }}
+
+    </section>
+<!--<aside>
+      This is an aside.
+    </aside> -->
+  </article>
+</main>
+
+<script src="/assets/js/search.js"></script>

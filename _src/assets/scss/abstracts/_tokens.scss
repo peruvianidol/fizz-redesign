@@ -1,0 +1,190 @@
+$color-black: #000000;
+$color-gray-900: #000000;
+$color-gray-800: #1B1B1B;
+$color-gray-700: #262626;
+$color-gray-600: #595959;
+$color-gray-500: #848484;
+$color-gray-400: #BFBFBF;
+$color-gray-300: #D9D9D9;
+$color-gray-200: #EAEAEA;
+$color-gray-100: #EFF0F0;
+$color-gray-050: #F5F7F7;
+$color-white: #FFFFFF;
+$color-black-60pct: rgba(0,0,0,.5);
+$color-white-90pct: rgba(255,255,255,.9);
+
+$color-navy-900: #002036;
+$color-navy-800: #002B48;
+$color-navy-700: #003C65;
+$color-navy-600: #0B5384;
+$color-navy-500: #226FA4;
+$color-navy-400: #69A5CE;
+$color-navy-300: #9DC6E2;
+$color-navy-200: #CCE2F1;
+$color-navy-100: #F2F7FB;
+
+$color-teal-900: #006789;
+$color-teal-800: #007FA9;
+$color-teal-700: #008FBE;
+$color-teal-600: #1F9CC6;
+$color-teal-500: #3CA9CD;
+$color-teal-400: #7FC9E2;
+$color-teal-300: #A8DCEE;
+$color-teal-200: #CDECF5;
+$color-teal-100: #EEFBFF;
+
+$color-green-900: #00452E;
+$color-green-800: #006644;
+$color-green-700: #007F54;
+$color-green-600: #009765;
+$color-green-500: #36B37E;
+$color-green-400: #6BC89D;
+$color-green-300: #91DCB9;
+$color-green-200: #D4EEE2;
+$color-green-100: #F1FAF5;
+
+$color-red-900: #760E14;
+$color-red-800: #9E1C23;
+$color-red-700: #B81C28;
+$color-red-600: #CB2431;
+$color-red-500: #E1434F;
+$color-red-400: #F26D77;
+$color-red-300: #F9959D;
+$color-red-200: #FFCBCF;
+$color-red-100: #FFEEEF;
+
+$color-yellow-900: #F18200;
+$color-yellow-800: #FF8B00;
+$color-yellow-700: #FF991F;
+$color-yellow-600: #FFAB00;
+$color-yellow-500: #FFC400;
+$color-yellow-400: #FFE380;
+$color-yellow-300: #FFF0B3;
+$color-yellow-200: #FFF6D1;
+$color-yellow-100: #FFFBED;
+
+$color-text-body: $color-gray-800;
+$color-text-subdued: $color-gray-600;
+$color-text-inverse: $color-white;
+$color-text-link: $color-teal-700;
+$color-text-brand: $color-navy-800;
+$color-text-positive: $color-green-600;
+$color-text-deal: $color-green-600;
+$color-text-negative: $color-red-600;
+
+$color-background-body: $color-gray-050;
+$color-background-highlight: $color-gray-050;
+$color-background-highlight-interactive: $color-navy-100;
+$color-background-surface: $color-white;
+$color-background-surface-brand: $color-navy-100;
+$color-background-inverse: $color-black;
+$color-background-disabled: $color-gray-400;
+$color-background-cart: $color-gray-200;
+$color-background-brand: $color-navy-800;
+$color-background-brand-secondary: $color-teal-600;
+$color-background-overlay: $color-black-60pct;
+$color-background-error: $color-red-600;
+$color-background-error-subdued: $color-red-100;
+$color-background-brand-subdued: $color-navy-100;
+$color-background-success-subdued: $color-green-100;
+$color-background-warning-subdued: $color-yellow-200;
+$color-background-super-primary: $color-green-600;
+
+$color-icon-link: $color-teal-600;
+$color-icon-body: $color-gray-800;
+$color-icon-subdued: $color-gray-500;
+$color-icon-brand: $color-navy-800;
+$color-icon-brand-hover: $color-navy-600;
+$color-icon-inverted: $color-white;
+
+$color-border-default: $color-gray-200;
+$color-border-input: $color-gray-400;
+$color-border-brand: $color-navy-800;
+$color-border-brand-secondary: $color-teal-700;
+$color-border-error: $color-red-600;
+$color-border-success: $color-green-600;
+$color-border-warning: $color-yellow-600;
+$color-border-super-primary: $color-green-600;
+
+$heading-1-font-size: 2rem;
+$heading-1-line-height: 2.5rem;
+$heading-2-font-size: 1.5rem;
+$heading-2-line-height: 2.25rem;
+$heading-3-font-size: 1.25rem;
+$heading-3-line-height: 1.875rem;
+$heading-4-font-size: 1rem;
+$heading-4-line-height: 1.5rem;
+
+$text-large-font-size: 1rem;
+$text-large-line-height: 1.5rem;
+$text-medium-font-size: .875rem;
+$text-medium-line-height: 1.25rem;
+$text-small-font-size: .75rem;
+$text-small-line-height: 1.125rem;
+$text-tiny-font-size: .625rem;
+$text-tiny-line-height: 1;
+
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+$border-radius-small: 2px;
+$border-radius-medium: 4px;
+$border-radius-large: 8px;
+$border-radius-xlarge: 16px;
+$border-radius-round: 50%;
+$border-width-thin: 1px;
+$border-width-thick: 2px;
+$border-width-extra-thick: 4px;
+
+$spacing-2: .125rem;
+$spacing-4: .25rem;
+$spacing-8: .5rem;
+$spacing-12: .75rem;
+$spacing-16: 1rem;
+$spacing-24: 1.5rem;
+$spacing-32: 2rem;
+$spacing-48: 3rem;
+$spacing-64: 4rem;
+$spacing-96: 6rem;
+$spacing-128: 8rem;
+
+$breakpoint-xl: 1440px;
+$breakpoint-l: 1175px;
+$breakpoint-m: 700px;
+
+$min-width: 325px;
+$max-line-length: 75ch;
+$one-col-max-width: 514px;
+$sidebar-width: 260px;
+
+$gutter-compact: $spacing-8;
+$gutter-medium: $spacing-16;
+$gutter-comfortable: $spacing-24;
+
+$icon-size-tiny: .75rem;
+$icon-size-small: 1rem;
+$icon-size-medium: 1.5rem;
+$icon-size-large: 2rem;
+$icon-size-xlarge: 3rem;
+
+$elevation-sticky: 100;
+$elevation-sticky-header: 200;
+$elevation-popover: 300;
+$elevation-overlay: 1400;
+$elevation-modal: 1500;
+
+$elevation-popover-shadow: 0 2px 4px 0px $color-black-60pct;
+$elevation-modal-shadow: 0 0 10px 2px $color-gray-600;
+$elevation-1-shadow: 0px 3px 5px rgba(89, 89, 89, 0.25), 0px 0px 1px rgba(89, 89, 89, 0.3);
+
+$box-shadow: 0 2px 6px 0 rgba(0,0,0,0.14);
+$box-shadow-top: 0 -2px 6px 0 rgba(0,0,0,0.14);
+$box-shadow-input-focus: 0px 0px 6px #0090C3;
+$box-shadow-tooltip: $elevation-1-shadow;
+
+$input-shadow: inset 0 1px 3px 0 $color-gray-400;
+$color-toggle-slot: $color-green-400;
+$color-toggle-knob: $color-green-600;
+
+$alert-min-width: 400px;
+$alert-max-width: 800px;

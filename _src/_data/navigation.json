@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "title": "Foundations",
+      "tag": "foundations"
+    },
+    {
+      "title": "Visual Style",
+      "tag": "style"
+    },
+    {
+      "title": "UI Components",
+      "tag": "components"
+    },
+    {
+      "title": "Utility Classes",
+      "tag": "utilities"
+    },
+    {
+      "title": "Layouts",
+      "tag": "layouts"
+    }
+  ]
+}

@@ -1,12 +1,22 @@
 // requre Luxon for date conversion
 const { DateTime } = require("luxon");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
   // Set directories to pass through to the _site folder
   eleventyConfig.addPassthroughCopy("_src/assets/images/");
+  eleventyConfig.addPassthroughCopy("_src/assets/meta/");
+  eleventyConfig.addPassthroughCopy("_src/assets/icons/");
+  eleventyConfig.addPassthroughCopy("_src/assets/js/");
 
   // Watch scss folder for changes
   eleventyConfig.addWatchTarget("./_src/assets/scss/");
+
+  // Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Filters
+  eleventyConfig.addFilter("squash", require("./_src/_filters/squash.js") );
 
   // open a browser window on --watch
   eleventyConfig.setBrowserSyncConfig({

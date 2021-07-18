@@ -1,0 +1,144 @@
+@import 'abstracts/tokens';
+@import 'vendor/prism-okaidia';
+
+body {
+  display: grid;
+  grid-template-columns: 256px 1fr;
+}
+
+[data-grid-area="aside"] {
+  grid-area: "aside";
+  background-color: #002036;
+  color: #BFBFBF;
+  padding: 32px;
+}
+
+[data-grid-area="main"] {
+  grid-area: "main";
+  background-color: white;
+}
+
+.nav-header {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #F2F7FB;
+  margin-bottom: .5rem;
+}
+
+aside a {
+  color: inherit;
+  font-weight: 600;
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+aside a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.page-title {
+  background-color: #F2F7FB;
+  padding: 64px;
+}
+
+.page-title h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 600;
+}
+
+.page-title p {
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 60ch;
+}
+
+.main-content {
+  max-width: 75ch;
+  padding: 64px;
+}
+
+header {
+  padding: 8px 0;
+}
+header svg {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-bar {
+  padding: 32px 64px;
+}
+
+.fizz-input-search {
+  width: 100%;
+  max-width: 55ch !important;
+}
+
+.palette p:first-of-type {
+  border-radius: $border-radius-large $border-radius-large 0 0;
+}
+
+.palette p:last-of-type {
+  border-radius: 0 0 $border-radius-large $border-radius-large;
+}
+
+.palette p {
+  padding: $spacing-16 $spacing-16 $spacing-32 $spacing-16;
+  font-size: $text-small-font-size;
+  line-height: $text-small-line-height;
+}
+
+[data-color-name*="-500"],
+[data-color-name*="-600"],
+[data-color-name*="-700"],
+[data-color-name*="-800"],
+[data-color-name*="-900"],
+[data-color-name*="black"] {
+  color: $color-white;
+}
+
+[id] {
+  scroll-margin-top: 1rem;
+}
+
+.fizz-logo {
+  transform: rotate(-15deg);
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+#search-results {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: .875rem;
+  margin-top: .5rem;
+  max-width: 55ch;
+}
+
+#search-results:before {
+  content: "Search Results";
+  display: block;
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  color: #595959;
+}
+
+#search-results a {
+  display: inline-block;
+  padding: .25rem 0;
+}
+
+.fizz-is-hidden {
+  display: none;
+}
