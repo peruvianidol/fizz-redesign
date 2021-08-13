@@ -63,9 +63,30 @@
 
   });
 
-  searchInput.addEventListener("blur", function(event) {
+  // hide the search results when clicking outside them
+  document.addEventListener("click", (event) => {
+    let targetEl = event.target; // clicked element      
+    do {
+      if(targetEl == searchResults) {
+        return;
+      }
+      targetEl = targetEl.parentNode;
+    } while (targetEl);
     searchResults.classList.add("fizz-is-hidden");
   });
 
-
 })();
+
+let open = document.getElementById('menu-open');
+let close = document.getElementById('menu-close');
+let container = document.querySelector(".layout-two-column");
+let menu = document.querySelector('[data-grid-area="nav"');
+open.addEventListener("click", (e) => {
+  container.classList.add("overflow-hidden");
+  menu.classList.toggle("is-open");
+});
+close.addEventListener("click", (e) => {
+  container.classList.remove("overflow-hidden");
+  menu.classList.toggle("is-open");
+});
+

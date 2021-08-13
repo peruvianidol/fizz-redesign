@@ -2,48 +2,45 @@
 layout: base
 ---
 
-<aside data-grid-area="aside">
-  <header>
-    <h1 class="fizz-text-center fizz-stack-32">
-    <a href="/"><svg class="fizz-logo"><use xlink:href="#fizz-logo"></svg></a>
-    </h1>
+<aside data-grid-area="nav">
+  <button class="fizz-icon-button fizz-text-inverse close-button" id="menu-close">
+    <svg class="fizz-icon-24"><use xlink:href="#icon-close"></svg>
+  </button>
+  <header class="fizz-stack-32">
+    <a href="/"><img src="/assets/meta/fizz-logo-final.png" alt="Fizz Design System" class="fizz-logo" width="200" height="200"></a>
   </header>
   <nav>
     {% for section in navigation.sections %}
-      <p class="nav-header">{{ section.title }}</p>
-      <ul class="fizz-stack-32">
+      <p class="eyebrow fizz-stack-8">{{ section.title }}</p>
+      <ul role="list" class="fizz-stack-32 nav-list">
         {% for item in collections[section.tag] %}
-          <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+          <li{% if item.url === page.url %} class="fizz-is-active"{% endif %}><a href="{{ item.url }}">{{ item.data.title }}</a></li>
         {% endfor %}
       </ul>
     {% endfor %}
   </nav>
 </aside>
 
-<main data-grid-area="main">
-  <section class="fizz-space-between-4 fizz-border-bottom search-bar">
-    {% include "search-ui.njk" %}
-    <p class="fizz-text-medium"><a href="https://github.com/Provi-Engineering/fizz/releases"><strong>v1.0</strong></a></p>
-    <a href="https://github.com/Provi-Engineering/fizz" class="fizz-text-inherit fizz-icon-button-small"><svg class="fizz-icon-16"><use xlink:href="#icon-github"></svg></a>
-  </section>
+<section data-grid-area="search" class="fizz-space-between-12">
+  <button class="fizz-icon-button open-button" id="menu-open">
+  <svg class="fizz-icon-24"><use xlink:href="#icon-menu"></svg>
+  </button>
+  {% include "search-ui.njk" %}
+  <p><a href="https://github.com/Provi-Engineering/fizz/releases"><strong>v1.0</strong></a></p>
+  <a href="https://github.com/Provi-Engineering/fizz" class="fizz-text-inherit fizz-icon-button"><svg class="fizz-icon-24"><use xlink:href="#icon-github"></svg></a>
+</section>
   
-  <article>
-    <section class="page-title fizz-border-bottom">
-      {% if description %}
-        <h2 class="page-heading fizz-stack-12">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
-        <p class="fizz-text-subdued">{{ description }}</p>
-      {% else %}
-        <h2 class="page-heading">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
-      {% endif %}
-    </section>
-    <section class="fizz-flow-32 main-content">
-
-      {{ content | safe }}
-
-    </section>
-<!--<aside>
-      This is an aside.
-    </aside> -->
+<main data-grid-area="main" class="layout-docs">
+  <section data-grid-area="title">
+    {% if description %}
+      <h2 class="doc-title fizz-stack-12">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
+      <p class="doc-subtitle">{{ description }}</p>
+    {% else %}
+      <h2 class="doc-title">{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</h2>
+    {% endif %}
+  </section>
+  <article data-grid-area="article" class="fizz-flow-24">
+  {{ content | safe }}
   </article>
 </main>
 

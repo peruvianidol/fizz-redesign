@@ -1,0 +1,9 @@
+{% import 'macros/code.njk' as code %}
+
+{{ description | safe }}
+
+{{ html | safe }}
+
+{% call code.sample() %}
+{{- html | safe }}
+{% endcall %}

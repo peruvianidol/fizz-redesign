@@ -1,0 +1,33 @@
+---
+title: Menus
+---
+
+{% import 'macros/code.njk' as code %}
+
+<h2 class="fizz-heading-2">Toggle Menu</h2>
+
+<p>Clicking on a <code>&lt;dt&gt;</code> should apply <code>.fizz-is-open</code> to the <code>&lt;dt&gt;</code> and toggle visibility of the associated <code>&lt;dd&gt;</code>.</p>
+
+<dl class="fizz-toggle-menu">
+  <dt>Header &amp; Logo</dt>
+  <dd hidden>
+    <p>Some content</p>
+  </dd>
+  <dt class="fizz-is-open">Featured Product</dt>
+  <dd>
+    <p>Some content</p>
+  </dd>  
+</dl>
+
+{% call code.sample() %}
+<dl class="fizz-toggle-menu">
+  <dt>Header &amp; Logo</dt>
+  <dd hidden>
+    <p>Some content</p>
+  </dd>
+  <dt class="fizz-is-open">Featured Product</dt>
+  <dd>
+    <p>Some content</p>
+  </dd>  
+</dl>
+{% endcall %}

@@ -1,0 +1,61 @@
+---
+title: Badges
+---
+
+{% import 'macros/code.njk' as code %}
+
+<span class="fizz-badge">Craft</span>
+
+{% call code.sample() %}
+<span class="fizz-badge">Craft</span>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Icon Badges</h2>
+
+<div>
+  <div class="fizz-badge-icon fizz-text-positive">
+    {% icon "deal", "fizz-icon-24" %}
+    <span>Deal</span>
+  </div>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-badge-icon fizz-text-positive">
+  {% icon "deal", "fizz-icon-24" %}
+  <span>Deal</span>
+</div>
+{% endcall %}
+
+<div>
+  <div class="fizz-badge-icon-vertical fizz-text-positive">
+    {% icon "deal", "fizz-icon-24" %}
+    <span>Deal</span>
+  </div>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-badge-icon-vertical fizz-text-positive">
+  {% icon "deal", "fizz-icon-24" %}
+  <span>Deal</span>
+</div>
+{% endcall %}
+
+<p><strong>.fizz-badge-icon-overlay</strong> is absolutely positioned to the top/left of its parent container, so the parent needs to include <strong>.fizz-position-relative</strong>.</p>
+
+<div class="fizz-position-relative">
+  <div class="fizz-badge-icon-overlay fizz-text-positive">
+    {% icon "deal", "fizz-icon-24" %}
+    <span>Deal</span>
+  </div>
+  <img src="https://www.fillmurray.com/400/300" width="400" height="300" alt="Placeholder Image">
+</div>
+
+{% call code.sample() %}
+<div class="fizz-position-relative">
+  <div class="fizz-badge-icon-overlay fizz-text-positive">
+    {% icon "deal", "fizz-icon-24" %}
+    <span>Deal</span>
+  </div>
+  <img src="https://www.fillmurray.com/400/300" width="400" height="300" alt="Placeholder Image">
+</div>
+{% endcall %}

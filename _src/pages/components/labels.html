@@ -1,0 +1,38 @@
+---
+title: Labels
+---
+
+{% import 'macros/code.njk' as code %}
+
+<h3 class="fizz-heading-3">Overlay Label</h3>
+
+<p>This label is used to highlight featured product cards. Text should have a class of <code>.fizz-label-overlay</code> and be nested inside a <code>div</code> with the class <code>.fizz-relative</code> along with the image or content you want to overlay it on. It will be positioned over the bottom edge of that element.</p>
+
+<p>The product card in the following example is not currently in production but meant to serve as a visual example.</p>
+
+<figure class="fizz-card fizz-inline-block fizz-inset-square-12 fizz-radius-small" style="max-width: 250px">
+  <div class="fizz-relative">
+    <img src="https://assets.provi.com/tiz2/image/upload/e_trim/w_150,h_210,c_pad,b_white/v1608072049/product-lines/561587.jpg" class="fizz-full-width fizz-contain" height="150">
+    <p class="fizz-label-overlay">Featured</p>
+  </div>
+  <figcaption class="fizz-text-center fizz-inset-vertical-8">
+    <p class="fizz-text-uppercase fizz-text-small fizz-text-interactive"><strong>More Packages Available</strong></p>
+    <p class="fizz-text-large">Grey Goose Essences Watermelon & Basil</p>
+    <p class="fizz-text-subdued">Southern-IL</p>
+  </figcaption>
+</figure>
+
+
+{% call code.sample() %}
+<figure class="fizz-card fizz-inline-block fizz-inset-square-12 fizz-radius-small" style="max-width: 250px">
+  <div class="fizz-relative">
+    <img src="https://assets.provi.com/tiz2/image/upload/e_trim/w_150,h_210,c_pad,b_white/v1608072049/product-lines/561587.jpg" class="fizz-full-width fizz-contain" height="150">
+    <p class="fizz-label-overlay">Featured</p>
+  </div>
+  <figcaption class="fizz-text-center fizz-inset-vertical-8">
+    <p class="fizz-text-uppercase fizz-text-small fizz-text-interactive"><strong>More Packages Available</strong></p>
+    <p class="fizz-text-large">Grey Goose Essences Watermelon & Basil</p>
+    <p class="fizz-text-subdued">Southern-IL</p>
+  </figcaption>
+</figure>
+{% endcall %}

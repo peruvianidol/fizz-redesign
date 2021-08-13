@@ -1,0 +1,69 @@
+---
+title: Pagination
+---
+
+{% import 'macros/code.njk' as code %}
+
+<h2 class="fizz-heading-2">Pagination Standard</h2>
+<div class="fizz-heading-3 fizz-text-center">
+  <h2 class="page-display">Page 1</h2>
+</div>
+<div class="fizz-pagination fizz-stack-32">
+  <button id="previous" class="fizz-prev" disabled><span>Previous</span></button>
+  <ol class="fizz-pagination-list">
+    <li class="fizz-is-active"><a href="javascript: void(0)">1</a></li>
+    <li><a href="javascript: void(0)">2</a></li>
+    <li><a href="javascript: void(0)">3</a></li>
+    <li><a href="javascript: void(0)">4</a></li>
+    <li><a href="javascript: void(0)">5</a></li>
+    <li><a href="javascript: void(0)">6</a></li>
+  </ol>
+  <button id="next" class="fizz-next"><span>Next</span></button>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-pagination fizz-stack-32">
+  <button id="previous" class="fizz-prev">
+    <span>Previous</span>
+  </button>
+  <ol class="fizz-pagination-list">
+    <li class="fizz-is-active"><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+  </ol>
+  <button id="next" class="fizz-next">
+    <span>Next</span>
+  </button>
+</div>
+{% endcall %}
+<br>
+
+<h2 class="fizz-heading-2">Pagination Small</h2>
+<div class="fizz-pagination fizz-stack-32">
+  <button id="previous" class="fizz-prev-small" disabled><span>Previous</span></button>
+  <ol class="fizz-pagination-list">
+    <li class="fizz-is-active"><a href="javascript: void(0)">1</a></li>
+    <li><a href="javascript: void(0)">2</a></li>
+    <li><a href="javascript: void(0)">3</a></li>
+    <li><a href="javascript: void(0)">4</a></li>
+    <li><a href="javascript: void(0)">5</a></li>
+    <li><a href="javascript: void(0)">6</a></li>
+  </ol>
+  <button id="next" class="fizz-next-small"><span>Next</span></button>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-pagination fizz-stack-32">
+  <button id="previous" class="fizz-prev-small">
+    <span>Previous</span>
+  </button>
+  <ol class="fizz-pagination-list">
+    <li class="fizz-is-active"><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+  </ol>
+  <button id="next" class="fizz-next-small">
+    <span>Next</span>
+  </button>
+</div>
+{% endcall %}

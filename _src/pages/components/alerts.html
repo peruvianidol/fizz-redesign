@@ -1,0 +1,125 @@
+---
+title: Alerts
+---
+
+{% import 'macros/code.njk' as code %}
+
+<div class="fizz-alert-warning">
+  <p><strong>Warning</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+
+<div class="fizz-alert-error">
+  <p><strong>Error</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+
+<div class="fizz-alert-info">
+  <p><strong>Informational</strong></p>
+  <p>Here is information about something.</p>
+</div>
+
+<div class="fizz-alert-success">
+  <p><strong>Success</strong></p>
+  <p>Here is confirmation about something.</p>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-alert-warning">
+  <p><strong>Warning</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+
+<div class="fizz-alert-error">
+  <p><strong>Error</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+
+<div class="fizz-alert-info">
+  <p><strong>Informational</strong></p>
+  <p>Here is information about something.</p>
+</div>
+
+<div class="fizz-alert-success">
+  <p><strong>Success</strong></p>
+  <p>Here is confirmation about something.</p>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Compact</h2>
+
+<p>Functionally the same as regular alerts. Just putting everything on one line.</p>
+
+<div class="fizz-alert-warning">
+  <p><strong>Warning</strong> Here is a warning about something.</p>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-alert-warning">
+  <p><strong>Warning</strong> Here is a warning about something.</p>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Dismissable</h2>
+
+<div class="fizz-alert-warning">
+  <button class="fizz-icon-button-small fizz-close-button">
+    {% icon "close", "fizz-icon-16" %}
+  </button>
+  <p><strong>Warning</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-alert-warning">
+  <button class="fizz-icon-button-small fizz-close-button">
+    {% icon "close", "fizz-icon-16" %}
+  </button>
+  <p><strong>Warning</strong></p>
+  <p>Here is a warning about something.</p>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2" id="flash-message-container">Flash Message Container</h2>
+
+<p>You can add any number of alerts to a <code>.fizz-flash-message-container</code> give them a drop-shadow and position them absolutely on the page, relative to a parent container with <code>.fizz-relative</code> applied.</p>
+
+<div class="fizz-relative" style="height: 200px">
+  <div class="fizz-flash-message-container">
+    <div class="fizz-alert-error">
+      <button class="fizz-icon-button-small fizz-close-button">
+        {% icon "close", "fizz-icon-16" %}
+      </button>
+      <p><strong>Error</strong></p>
+      <p>Here is an error about something.</p>
+    </div>
+    <div class="fizz-alert-error">
+      <button class="fizz-icon-button-small fizz-close-button">
+        {% icon "close", "fizz-icon-16" %}
+      </button>
+      <p><strong>Error</strong></p>
+      <p>Here is another error about something.</p>
+    </div>
+  </div>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-relative" style="height: 200px">
+  <div class="fizz-flash-message-container">
+    <div class="fizz-alert-error">
+      <button class="fizz-icon-button-small fizz-close-button">
+        {% icon "close", "fizz-icon-16" %}
+      </button>
+      <p><strong>Error</strong></p>
+      <p>Here is an error about something.</p>
+    </div>
+    <div class="fizz-alert-error">
+      <button class="fizz-icon-button-small fizz-close-button">
+        {% icon "close", "fizz-icon-16" %}
+      </button>
+      <p><strong>Error</strong></p>
+      <p>Here is another error about something.</p>
+    </div>
+  </div>
+</div>
+{% endcall %}

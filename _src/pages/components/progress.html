@@ -1,0 +1,59 @@
+---
+title: 'Progress'
+---
+
+{% import 'macros/code.njk' as code %}
+
+<h2 class="fizz-heading-2">Progress Tracker</h2>
+
+<div style="max-width: 110px">
+  <p class="fizz-text-small fizz-text-center fizz-stack-8"><strong>3/5 Cases</strong></p>
+  <div class="fizz-progress-tracker" style="--progress: 60%;"></div>
+</div>
+
+{% call code.sample() %}
+<div style="max-width: 110px">
+  <p class="fizz-text-small fizz-text-center fizz-stack-8"><strong>3/5 Cases</strong></p>
+  <div class="fizz-progress-tracker" style="--progress: 60%;"></div>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Progress List</h2>
+
+<p>Apply <code>.fizz-progress-list</code> to an ordered list (<code>&lt;ol&gt;</code>). The current step list item should have a class of <code>.fizz-is-active</code> and each step's list item should have a <code>data-step</code> attribute containing the text that will appear on small screens for which step of how many. (ex. <code>data-step="1 of 3"</code>)</p>
+
+<p>You should also apply a <code>max-width</code> via inline styles as needed.</p>
+
+<div class="fizz-surface fizz-inset-square-16">
+  <ol class="fizz-progress-list fizz-margin-auto" style="max-width: 514px;">
+    <li class="fizz-is-active" data-step="1 of 3">Business Details</li>
+    <li data-step="2 of 3">Your Distributors</li>
+    <li data-step="3 of 3">Your Sales Reps</li>
+  </ol>
+</div>
+
+{% call code.sample() %}
+<ol class="fizz-progress-list fizz-margin-auto" style="max-width: 514px;">
+  <li class="fizz-is-active" data-step="1 of 3">Business Details</li>
+  <li data-step="2 of 3">Your Distributors</li>
+  <li data-step="3 of 3">Your Sales Reps</li>
+</ol>
+{% endcall %}
+
+<p>Previous steps in the process should include the class <code>.fizz-is-complete</code> on the list item element and the text should be enclosed in an anchor tag linking to the step.</p>
+
+<div class="fizz-surface fizz-inset-square-16">
+  <ol class="fizz-progress-list fizz-margin-auto" style="max-width: 514px;">
+    <li data-step="1 of 3" class="fizz-is-complete"><a href="">Business Details</a></li>
+    <li class="fizz-is-active" data-step="2 of 3">Your Distributors</li>
+    <li data-step="3 of 3">Your Sales Reps</li>
+  </ol>
+</div>
+
+{% call code.sample() %}
+<ol class="fizz-progress-list fizz-margin-auto" style="max-width: 514px;">
+  <li data-step="1 of 3" class="fizz-is-complete"><a href="details.html">Business Details</a></li>
+  <li class="fizz-is-active" data-step="2 of 3">Your Distributors</li>
+  <li data-step="3 of 3">Your Sales Reps</li>
+</ol>
+{% endcall %}`

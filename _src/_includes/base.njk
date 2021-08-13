@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {%- include "partials/meta.html" -%}
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="stylesheet" href="/assets/css/fizz.css">
-  <link rel="stylesheet" href="https://provi-fizz.netlify.app/css/fizz-unscoped.css">
+  <link rel="stylesheet" href="https://provi-fizz.netlify.app/css/fizz-unscoped.css?{{ assetHash }}">
+  <link rel="stylesheet" href="/assets/css/fizz.css?{{ assetHash }}">
+  <link rel="stylesheet" href="/assets/css/site.css?{{ assetHash }}">
 </head>
-<body>
+<body{% if layoutClass %} class="{{ layoutClass }}" {% endif %}>
   <div hidden>
     {% include "icons/sprite.svg" %}
   </div>
 
   {{ content | safe }}
 
+  <script async src="/assets/js/fizz.js?{{ assetHash }}"></script>
 </body>
 </html>

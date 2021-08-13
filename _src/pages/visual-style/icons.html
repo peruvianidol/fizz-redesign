@@ -1,0 +1,75 @@
+---
+title: 'Icons'
+---
+
+{% import 'macros/code.njk' as code %}
+
+{% anchor %}UI Icons{% endanchor %}
+
+<ul class="fizz-grid fizz-text-medium fizz-flow-24" style="--grid-col-min: 110px;">
+  {% for svg in iconlist %}
+  <li class="fizz-text-center">
+    {% icon svg, "fizz-icon-32 fizz-margin-auto fizz-stack-4" %}
+    <span><a href="/assets/icons/ui/{{ svg }}.svg" download>{{ svg }}</a></span>
+  </li>
+  {% endfor %}
+</ul>
+
+{% anchor %}Payment Types{% endanchor %}
+
+<ul class="fizz-grid fizz-text-medium fizz-flow-24" style="--grid-col-min: 110px;">
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/ach.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/ach.svg" download>ach</a></span>
+  </li>
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/amex.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/amex.svg" download>amex</a></span>
+  </li>
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/credit-card.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/credit-card.svg" download>credit-card</a></span>
+  </li>
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/discover.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/discover.svg" download>discover</a></span>
+  </li>
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/mastercard.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/mastercard.svg" download>mastercard</a></span>
+  </li>
+  <li class="fizz-text-center">
+    <img src="/assets/icons/ui/payments/visa.svg" width="34" height="24" class="fizz-margin-auto">
+    <span><a href="/assets/icons/ui/payments/visa.svg" download>visa</a></span>
+  </li>
+</ul>
+
+{% anchor %}Icon Sizes{% endanchor %}
+
+<div>
+  <ul class="fizz-grid fizz-text-medium" style="--grid-col-min: 110px; align-items: center;">
+    <li class="fizz-text-center">
+      {% icon "info", "fizz-icon-48 fizz-margin-auto fizz-stack-4" %}
+    </li>
+    <li class="fizz-text-center">
+      {% icon "info", "fizz-icon-32 fizz-margin-auto fizz-stack-4" %}
+    </li>
+    <li class="fizz-text-center">
+      {% icon "info", "fizz-icon-24 fizz-margin-auto fizz-stack-4" %}
+    </li>
+    <li class="fizz-text-center">
+      {% icon "info", "fizz-icon-16 fizz-margin-auto fizz-stack-4" %}
+    </li>
+  </ul>
+  
+  <ul class="fizz-grid fizz-text-medium" style="--grid-col-min: 110px;">
+    <li class="fizz-text-center"><p>XLarge / <strong>fizz-icon-48</strong></p></li>
+    <li class="fizz-text-center"><p>Large / <strong>fizz-icon-32</strong></p></li>
+    <li class="fizz-text-center"><p>Medium / <strong>fizz-icon-24</strong></p></li>
+    <li class="fizz-text-center"><p>Small / <strong>fizz-icon-16</strong></p></li>
+  </ul>
+</div>
+
+  {% anchor %}Spinner{% endanchor %}
+
+  {% include "../../code/spinner.njk" %}

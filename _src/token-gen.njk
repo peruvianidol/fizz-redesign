@@ -1,0 +1,25 @@
+---
+eleventyExcludeFromCollections: true
+permalinkBypassOutputDir: true
+permalink: "_src/assets/scss/abstracts/_tokens-gen.scss"
+---
+
+{%- for type, typeValues in tokens -%}
+  {%- for item, itemValues in typeValues -%}
+    {%- for subItem, subItemValues in itemValues -%}
+      {%- if subItem === "value" %}
+${{ type }}-{{ item }}: {{ subItemValues }};
+      {%- else -%}
+        {%- for state, stateValues in subItemValues -%}
+          {%- if state === "value" %}
+${{ type }}-{{ item }}-{{ subItem }}: {{ stateValues }};
+          {%- else -%}
+            {%- for state, stateValue in stateValues -%}
+${{ type }}-{{ item }}-{{ subItem }}-{{ state }}: {{ stateValue }};
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {% endfor %}
+{% endfor -%}

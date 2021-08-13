@@ -10,7 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_src/assets/js/");
 
   // Watch scss folder for changes
-  eleventyConfig.addWatchTarget("./_src/assets/scss/");
+  eleventyConfig.addWatchTarget("./_src/assets/scss/site.scss");
+  eleventyConfig.addWatchTarget("./_src/assets/scss/fizz.scss");
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -19,12 +20,38 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("squash", require("./_src/_filters/squash.js") );
 
   // open a browser window on --watch
-  eleventyConfig.setBrowserSyncConfig({
-    open: true,
-  });
+  // eleventyConfig.setBrowserSyncConfig({
+  //   open: true,
+  // });
 
   // shortcode for inserting the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // display an icon
+  eleventyConfig.addShortcode("icon", function(name, classes) {
+    return `<svg class="${classes}" role="img" aria-hidden="true" width="24" height="24">
+      <use xlink:href="#icon-${name}"></use>
+    </svg>`
+  });
+
+  // Show a code sample
+  eleventyConfig.addPairedShortcode("codeSample", function(content) {
+    return `
+  <details class="fizz-details">
+    <summary><span>HTML</span></summary>
+    ${content}
+  </details>`
+  });
+
+  // add anchor links to heading text
+  eleventyConfig.addPairedShortcode("anchor", function(content) {
+    return `
+    <h2 class="fizz-heading-2">
+    <a id="${eleventyConfig.getFilter('slug')(content)}" href="#${eleventyConfig.getFilter('slug')(content)}" class="fizz-anchor" aria-hidden="true">
+    ${content}
+    </a>
+    </h2>`
+  });
 
   // convert date to [Month DD, YYYY], set timezone to UTC to ensure date is not off by one
   // https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html
@@ -34,6 +61,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    htmlTemplateEngine: 'njk',
     // set the input and output directories
     dir: {
       input: '_src',

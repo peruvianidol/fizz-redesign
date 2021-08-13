@@ -1,0 +1,254 @@
+---
+title: Buttons
+---
+
+{% import 'macros/code.njk' as code %}
+
+<h2 class="fizz-heading-2">Buttons</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button">Button</button>
+  <button class="fizz-button-primary">Button</button>
+  <button class="fizz-button-secondary">Button</button>
+  <button class="fizz-button-super-primary">Button</button>
+  <button class="fizz-button-danger">Button</button>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-button">Button</button>
+<button class="fizz-button-primary">Button</button>
+<button class="fizz-button-secondary">Button</button>
+<button class="fizz-button-super-primary">Button</button>
+<button class="fizz-button-danger">Button</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Small Buttons</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button fizz-button-small">Button</button>
+  <button class="fizz-button-primary fizz-button-small">Button</button>
+  <button class="fizz-button-secondary fizz-button-small">Button</button>
+  <button class="fizz-button-super-primary fizz-button-small">Button</button>
+  <button class="fizz-button-danger fizz-button-small">Button</button>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-button fizz-button-small">Button</button>
+<button class="fizz-button-primary fizz-button-small">Button</button>
+<button class="fizz-button-secondary fizz-button-small">Button</button>
+<button class="fizz-button-super-primary fizz-button-small">Button</button>
+<button class="fizz-button-danger fizz-button-small">Button</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Large Buttons</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button fizz-button-large">Button</button>
+  <button class="fizz-button-primary fizz-button-large">Button</button>
+  <button class="fizz-button-secondary fizz-button-large">Button</button>
+  <button class="fizz-button-super-primary fizz-button-large">Button</button>
+  <button class="fizz-button-danger fizz-button-large">Button</button></div>
+
+{% call code.sample() %}
+<button class="fizz-button fizz-button-large">Button</button>
+<button class="fizz-button-primary fizz-button-large">Button</button>
+<button class="fizz-button-secondary fizz-button-large">Button</button>
+<button class="fizz-button-super-primary fizz-button-large">Button</button>
+<button class="fizz-button-danger fizz-button-large">Button</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Disabled Buttons</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button" disabled>Button</button>
+  <button class="fizz-button-primary" disabled>Button</button>
+  <button class="fizz-button-secondary" disabled>Button</button>
+  <button class="fizz-button-super-primary" disabled>Button</button>
+  <button class="fizz-button-danger" disabled>Button</button>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-button" disabled>Button</button>
+<button class="fizz-button-primary" disabled>Button</button>
+<button class="fizz-button-secondary" disabled>Button</button>
+<button class="fizz-button-super-primary" disabled>Button</button>
+<button class="fizz-button-danger" disabled>Button</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Button w/ Icon</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button-primary fizz-button-icon">
+    <svg class="fizz-icon-16"><use xlink:href="#icon-edit"></svg>
+    <span>Button</span>
+  </button>
+
+  <button class="fizz-button-primary fizz-button-icon">
+    <span>Button</span>
+    <svg class="fizz-icon-16"><use xlink:href="#icon-edit"></svg>
+  </button>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-button-primary fizz-button-icon">
+  <svg class="fizz-icon-16"><use xlink:href="#icon-edit"></svg>
+  <span>Button</span>
+</button>
+
+<button class="fizz-button-primary fizz-button-icon">
+  <span>Button</span>
+  <svg class="fizz-icon-16"><use xlink:href="#icon-edit"></svg>
+</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Icon Button</h2>
+
+<button class="fizz-icon-button-small">
+  {% icon "edit", "fizz-icon-16" %}
+</button>
+
+{% call code.sample() %}
+<button class="fizz-icon-button-small">
+  {% icon "edit", "fizz-icon-16" %}
+</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2" id="inverted-icon-button">Inverted Icon Button</h2>
+
+<div class="fizz-surface-brand fizz-inset-square-16">
+  <button class="fizz-icon-button-small fizz-icon-button-inverted">
+    {% icon "edit", "fizz-icon-16" %}
+  </button>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-icon-button-small fizz-icon-button-inverted">
+  {% icon "edit", "fizz-icon-16" %}
+</button>
+{% endcall %}
+
+<h2 class="fizz-heading-2">Text Button</h2>
+
+<div class="fizz-flex-row">
+  <button class="fizz-button-text">Text Button</button>
+  <button class="fizz-button-text" disabled>Disabled Text Button</button>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-flex-row">
+  <button class="fizz-button-text">Text Button</button>
+  <button class="fizz-button-text" disabled>Disabled Text Button</button>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2" id="select-button">Select Button</h2>
+
+<p>In some cases you might want a button that looks like a <code>select</code> element but functions like a button &mdash; to trigger a popover, for example.</p>
+
+<div class="fizz-flex-row">
+  <select class="fizz-select">
+    <option>Select Element</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <button class="fizz-button-select">Select Button</button>
+</div>
+
+{% call code.sample() %}
+<div class="fizz-flex-row">
+  <select class="fizz-select">
+    <option>Select Element</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <button class="fizz-button-select">Select Button</button>
+</div>
+{% endcall %}
+
+<h2 class="fizz-heading-2" id="button-group">Button Group</h2>
+
+<p><code>.fizz-button-group</code> can contain any number of <code>.fizz-button</code> or <code>.fizz-button-small</code> elements.</p>
+
+<p><code>.fizz-button-group</code> is an inline element, so it's contained in a <code>&lt;div&gt;</code> here to keep each example on its own line.</p>
+
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button fizz-is-active">Button</button>
+    <button class="fizz-button">Button</button>
+    <button class="fizz-button">Button</button>
+  </span>
+</div>
+
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button-small fizz-is-active">Button</button>
+    <button class="fizz-button-small">Button</button>
+    <button class="fizz-button-small">Button</button>
+  </span>
+</div>
+
+{% call code.sample() %}
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button fizz-is-active">Button</button>
+    <button class="fizz-button">Button</button>
+    <button class="fizz-button">Button</button>
+  </span>
+</div>
+
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button-small fizz-is-active">Button</button>
+    <button class="fizz-button-small">Button</button>
+    <button class="fizz-button-small">Button</button>
+  </span>
+</div>
+{% endcall %}
+
+<p>Here's an example of a multi-line button group.</p>
+
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button">
+      3 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $34.80 off</span>
+    </button>
+    <button class="fizz-button fizz-is-active">
+      5 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $42.00 off</span>
+    </button>
+    <button class="fizz-button">
+      10 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $60.00 off</span>
+    </button>
+  </span>
+</div>
+
+{% call code.sample() %}
+<div>
+  <span class="fizz-button-group">
+    <button class="fizz-button">
+      3 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $34.80 off</span>
+    </button>
+    <button class="fizz-button fizz-is-active">
+      5 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $42.00 off</span>
+    </button>
+    <button class="fizz-button">
+      10 Min Case<br>
+      <span class="fizz-text-small fizz-text-regular">Up to $60.00 off</span>
+    </button>
+  </span>
+</div>
+{% endcall %}
+
+{# <h2 class="fizz-heading-2">Icon Button</h2>
+
+<button class="fizz-icon-button">
+  <svg class="fizz-icon-24">
+    <use xlink:href="#icon-desktop"></use>
+  </svg>
+</button> #}

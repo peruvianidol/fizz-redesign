@@ -62,7 +62,7 @@ description: "Fizz uses a methodology called COOL CSS."
 
 <p>Traditionally, if we had a new feature, we might use a methodology such as <a href="http://getbem.com/">BEM</a> to apply a bunch of classes specific to that feature to apply things like margins and padding within a component, and name each child element accordingly:</p>
 
-{% highlight html %}
+{# {% highlight html %}
 <figure class="product-card">
   <img src="/img/products/1234.jpg" alt="A widget" class="product-card--image">
   <figcaption class="product-card--info">
@@ -73,13 +73,13 @@ description: "Fizz uses a methodology called COOL CSS."
     <button class="product-card--button">Buy</button>
   </figcaption>
 </figure>
-{% endhighlight %}
+{% endhighlight %} #}
 
 <p>While this might offer some degree of encapsulation, it also makes it nearly impossible to use any of these styles outside the context of a product card.</p>
 
 <p>Instead, we can use a combination of <strong>Component</strong> and <strong>Utility</strong> styles to acheive the same result with more reusable classes, greatly lowering the overall size of our CSS and allowing for almost any combination within the system without having to add feature specific styles:</p>
 
-{% highlight html %}
+{# {% highlight html %}
 <figure class="fizz-card">
   <img src="/img/products/1234.jpg" alt="A widget" class="fizz-stack-4">
   <figcaption>
@@ -90,7 +90,7 @@ description: "Fizz uses a methodology called COOL CSS."
     <button class="fizz-button-primary">Buy</button>
   </figcaption>
 </figure>
-{% endhighlight %}
+{% endhighlight %} #}
 
 <p>A few things are happening here:</p>
 

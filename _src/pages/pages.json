@@ -1,4 +1,5 @@
 {
   "layout": "two-column",
+  "layoutClass": "layout-two-column",
   "permalink": "/{{ page.fileSlug }}/"
 }

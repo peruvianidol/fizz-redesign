@@ -1,0 +1,187 @@
+---
+title: Modals
+---
+
+{% import 'macros/code.njk' as code %}
+
+<button class="fizz-modal-toggle fizz-button" data-modal="smallModalExample">Small Modal</button>
+
+<div class="fizz-modal fizz-modal-small" id="smallModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="smallModalExample"></div>
+  <div class="fizz-modal-content">
+    <header class="fizz-modal-header">
+      <h4 class="fizz-heading-4">Small Modal Title</h4>
+      <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="smallModalExample">
+        <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+      </a>
+    </header>
+    <section class="fizz-modal-main fizz-text-medium">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat arcu, tincidunt gravida tempor vel, cursus sodales risus. Nam lacus tellus, suscipit venenatis velit in, maximus faucibus turpis.</p>
+    </section>
+  </div>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-modal-toggle fizz-button" data-modal="smallModalExample">Small Modal</button>
+
+<div class="fizz-modal fizz-modal-small" id="smallModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="smallModalExample"></div>
+  <div class="fizz-modal-content">
+    <header class="fizz-modal-header">
+      <h4 class="fizz-heading-4">Small Modal Title</h4>
+      <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="smallModalExample">
+        <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+      </a>
+    </header>
+    <section class="fizz-modal-main fizz-text-medium">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat arcu, tincidunt gravida tempor vel, cursus sodales risus. Nam lacus tellus, suscipit venenatis velit in, maximus faucibus turpis.</p>
+    </section>
+  </div>
+</div>
+{% endcall %}
+
+<button class="fizz-modal-toggle fizz-button" data-modal="mediumModalExample">Medium Modal</button>
+
+<div class="fizz-modal fizz-modal-medium" id="mediumModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="mediumModalExample"></div>
+  <div class="fizz-modal-content">
+    <div class="layout-header-footer">
+      <header class="fizz-modal-header">
+        <h4 class="fizz-heading-4">Medium Modal Title</h4>
+        <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="mediumModalExample">
+          <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+        </a>
+      </header>
+      <section class="fizz-modal-main fizz-text-medium fizz-flow-16" data-grid-area="main">
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Owner</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Type</label>
+          <select class="fizz-select fizz-full-width">
+            <option>Select</option>
+          </select>
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Routing Number</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Number</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Nickname</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+      </section>
+      <footer class="fizz-modal-footer fizz-space-between">
+        <button class="fizz-button fizz-modal-toggle" data-modal="mediumModalExample">Back</button>
+        <button class="fizz-button-secondary fizz-modal-toggle" data-modal="mediumModalExample">Save payment method</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-modal-toggle fizz-button" data-modal="mediumModalExample">Medium Modal</button>
+
+<div class="fizz-modal fizz-modal-medium" id="mediumModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="mediumModalExample"></div>
+  <div class="fizz-modal-content">
+    <div class="layout-header-footer">
+      <header class="fizz-modal-header">
+        <h4 class="fizz-heading-4">Medium Modal Title</h4>
+        <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="mediumModalExample">
+          <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+        </a>
+      </header>
+      <section class="fizz-modal-main fizz-text-medium fizz-flow-16" data-grid-area="main">
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Owner</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Type</label>
+          <select class="fizz-select fizz-full-width">
+            <option>Select</option>
+          </select>
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Routing Number</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Number</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+        <div>
+          <label class="fizz-label fizz-stack-4">Account Nickname</label>
+          <input type="text" class="fizz-input-text fizz-full-width">
+        </div>
+      </section>
+      <footer class="fizz-modal-footer fizz-space-between">
+        <button class="fizz-button fizz-modal-toggle" data-modal="mediumModalExample">Back</button>
+        <button class="fizz-button-secondary fizz-modal-toggle" data-modal="mediumModalExample">Save payment method</button>
+      </footer>
+    </div>
+  </div>
+</div>
+{% endcall %}
+
+<button class="fizz-modal-toggle fizz-button" data-modal="largeModalExample">Large Modal</button>
+
+<div class="fizz-modal fizz-modal-large" id="largeModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="largeModalExample"></div>
+  <div class="fizz-modal-content">
+    <div class="layout-header-footer">
+      <header class="fizz-modal-header">
+        <h4 class="fizz-heading-4">Large Modal Title</h4>
+        <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="largeModalExample">
+          <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+        </a>
+      </header>
+      <section class="fizz-modal-main fizz-text-medium fizz-flow-16" data-grid-area="main">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat arcu, tincidunt gravida tempor vel, cursus sodales risus. Nam lacus tellus, suscipit venenatis velit in, maximus faucibus turpis. Mauris sodales finibus sodales. Ut sit amet molestie ipsum, ac condimentum lacus. Proin congue vestibulum mattis. Nulla in purus id justo mattis ultrices ac ac odio. Donec sagittis ut lacus non aliquet. Nam ac ultrices tellus. Phasellus at ante pellentesque, aliquet lorem in, dignissim enim. Nulla enim eros, bibendum in sem sit amet, tincidunt rhoncus neque. Suspendisse egestas lectus sem, eu dapibus dolor ultrices auctor.</p>
+
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pharetra ornare mi, in ullamcorper metus eleifend a. Praesent metus tellus, suscipit vel enim eget, dictum varius ante. Mauris ac convallis tellus. Sed neque augue, auctor vulputate tristique auctor, bibendum pulvinar mauris. Sed sem diam, luctus vitae rhoncus et, faucibus id sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla cursus quam vel pellentesque venenatis. Phasellus at ante pellentesque, aliquet lorem in, dignissim enim. Nulla enim eros, bibendum in sem sit amet, tincidunt rhoncus neque. Suspendisse egestas lectus sem, eu dapibus dolor ultrices auctor.</p>
+
+        <p>Phasellus vel blandit eros. Suspendisse porta diam justo, eget ultricies justo lacinia eu. Suspendisse eu nisl sed ligula rhoncus placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum dapibus quam et justo cursus, quis tempor massa laoreet. Fusce fringilla viverra volutpat. Aliquam erat volutpat. Quisque lobortis tortor nec tempus consequat. Ut rhoncus auctor tortor at auctor. Integer eget tortor sollicitudin, rhoncus mauris id, auctor mauris. Morbi gravida leo tempus, aliquet ligula nec, pellentesque nunc.</p>
+      </section>
+      <footer class="fizz-modal-footer fizz-flex-row fizz-justify-end">
+        <button class="fizz-button fizz-modal-toggle" data-modal="mediumModalExample">Default Button</button>
+        <button class="fizz-button-secondary fizz-modal-toggle" data-modal="mediumModalExample">Primary Button</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+{% call code.sample() %}
+<button class="fizz-modal-toggle fizz-button" data-modal="largeModalExample">Large Modal</button>
+
+<div class="fizz-modal fizz-modal-large" id="largeModalExample">
+  <div class="fizz-modal-overlay fizz-modal-toggle" data-modal="largeModalExample"></div>
+  <div class="fizz-modal-content">
+    <div class="layout-header-footer">
+      <header class="fizz-modal-header">
+        <h4 class="fizz-heading-4">Large Modal Title</h4>
+        <a href="#" class="fizz-modal-toggle fizz-modal-close" data-modal="largeModalExample">
+          <svg class="fizz-icon-16 fizz-text-brand"><use xlink:href="#icon-close"></svg>
+        </a>
+      </header>
+      <section class="fizz-modal-main fizz-text-medium fizz-flow-16" data-grid-area="main">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat arcu, tincidunt gravida tempor vel, cursus sodales risus. Nam lacus tellus, suscipit venenatis velit in, maximus faucibus turpis. Mauris sodales finibus sodales. Ut sit amet molestie ipsum, ac condimentum lacus. Proin congue vestibulum mattis. Nulla in purus id justo mattis ultrices ac ac odio. Donec sagittis ut lacus non aliquet. Nam ac ultrices tellus. Phasellus at ante pellentesque, aliquet lorem in, dignissim enim. Nulla enim eros, bibendum in sem sit amet, tincidunt rhoncus neque. Suspendisse egestas lectus sem, eu dapibus dolor ultrices auctor.</p>
+
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pharetra ornare mi, in ullamcorper metus eleifend a. Praesent metus tellus, suscipit vel enim eget, dictum varius ante. Mauris ac convallis tellus. Sed neque augue, auctor vulputate tristique auctor, bibendum pulvinar mauris. Sed sem diam, luctus vitae rhoncus et, faucibus id sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla cursus quam vel pellentesque venenatis. Phasellus at ante pellentesque, aliquet lorem in, dignissim enim. Nulla enim eros, bibendum in sem sit amet, tincidunt rhoncus neque. Suspendisse egestas lectus sem, eu dapibus dolor ultrices auctor.</p>
+
+        <p>Phasellus vel blandit eros. Suspendisse porta diam justo, eget ultricies justo lacinia eu. Suspendisse eu nisl sed ligula rhoncus placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum dapibus quam et justo cursus, quis tempor massa laoreet. Fusce fringilla viverra volutpat. Aliquam erat volutpat. Quisque lobortis tortor nec tempus consequat. Ut rhoncus auctor tortor at auctor. Integer eget tortor sollicitudin, rhoncus mauris id, auctor mauris. Morbi gravida leo tempus, aliquet ligula nec, pellentesque nunc.</p>
+      </section>
+      <footer class="fizz-modal-footer fizz-flex-row fizz-justify-end">
+        <button class="fizz-button fizz-modal-toggle" data-modal="mediumModalExample">Default Button</button>
+        <button class="fizz-button-secondary fizz-modal-toggle" data-modal="mediumModalExample">Primary Button</button>
+      </footer>
+    </div>
+  </div>
+</div>
+{% endcall %}

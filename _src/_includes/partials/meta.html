@@ -1,3 +1,2 @@
-<title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+<title>{% if title %}{{ title }}{% endif %}{% if site.name != title %} | {{ site.name }}{% endif %}</title>
 <link rel="icon" href="{{ site.favicon }}">
-<meta name="google-site-verification" content="LWF5ZbiAoVb56DmV3i8B60-kMiSBBosz7bg2bV7r7MA" />

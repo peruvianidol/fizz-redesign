@@ -1,0 +1,23 @@
+---
+title: Breadcrumbs
+---
+
+{% import 'macros/code.njk' as code %}
+
+<ol class="fizz-breadcrumbs">
+  <li><a href="">Home</a></li>
+  <li><a href="">Beer & Hard Seltzer</a></li>
+  <li><a href="">Belgian-Style Ales</a></li>
+  <li><a href="">Belgian Pale Ale</a></li>
+  <li>Location</li>
+</ol>
+
+{% call code.sample() %}
+<ol class="fizz-breadcrumbs">
+  <li><a href="">Home</a></li>
+  <li><a href="">Beer & Hard Seltzer</a></li>
+  <li><a href="">Belgian-Style Ales</a></li>
+  <li><a href="">Belgian Pale Ale</a></li>
+  <li>Location</li>
+</ol>
+{% endcall %}

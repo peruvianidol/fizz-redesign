@@ -1,0 +1,86 @@
+---
+title: 'Spacing'
+---
+
+<p>Fizz uses a scale of spacing values designed to provide consistency to Provi's content. By adhering to a spacing system, we avoid using arbitrary values for things like padding and margin, and create a clear hierarchy between elements on the page.</p>
+
+<p>Ideally, we should avoid applying fixed height/width values to elements and instead let their size be dicated by the combination of the content's line height, margins and padding. This ensures our layouts will adapt to all possible viewport sizes.</p>
+
+<p>Fizz has a number of <a href="/utilities/spacing/">spacing utilities</a> that help define the space within and between UI components so that we don't have to bake them into the components themselves. For example, Fizz resets the margins on text elements like headings and paragraphs so that you don't need to override the default margins whenever you want to deviate from them. Instead, you can use the spacing utilites to apply spacing to individual text elements or apply them to a parent container to give all the children the same margins.</p>
+
+{% anchor %}Spacing Scale{% endanchor %}
+
+<p>The spacing scale is designed to provide enough options for different use cases while still maintaining a clear heirarchy between elements. Sizes are expressed as relative ems (REM) to allow everything to scale the font size of the body (16px = 1rem). We can change the base value and everything else will scale accordingly, maintaining the proper proportions. The token names describe the spacing value in pixels.</p>
+
+<style>
+  .fizz-definition-list dd {
+    display: flex;
+    align-items: center;
+  }
+  .fizz-definition-list .meter {
+    height: 1rem;
+    width: var(--width);
+    background-color: #008FBE;
+    margin-right: .5rem;
+  }
+  .fizz-definition-list .meter + span {
+    font-size: .875rem;
+  }
+</style>
+
+<dl class="fizz-definition-list">
+  <dt>$spacing-2</dt>
+  <dd><span class="meter" style="--width: .125rem"></span><span>.125rem</span></dd>
+  <dt>$spacing-4</dt>
+  <dd><span class="meter" style="--width: .25rem"></span><span>.25rem</span></dd>
+  <dt>$spacing-8</dt>
+  <dd><span class="meter" style="--width: .5rem"></span><span>.5rem</span></dd>
+  <dt>$spacing-12</dt>
+  <dd><span class="meter" style="--width: .75rem"></span><span>.75rem</span></dd>
+  <dt>$spacing-16</dt>
+  <dd><span class="meter" style="--width: 1rem"></span><span>1rem</span></dd>
+  <dt>$spacing-24</dt>
+  <dd><span class="meter" style="--width: 1.5rem"></span><span>1.5rem</span></dd>
+  <dt>$spacing-32</dt>
+  <dd><span class="meter" style="--width: 2rem"></span><span>2rem</span></dd>
+  <dt>$spacing-48</dt>
+  <dd><span class="meter" style="--width: 3rem"></span><span>3rem</span></dd>
+  <dt>$spacing-64</dt>
+  <dd><span class="meter" style="--width: 4rem"></span><span>4rem</span></dd>
+  <dt>$spacing-96</dt>
+  <dd><span class="meter" style="--width: 6rem"></span><span>6rem</span></dd>
+  <dt>$spacing-128</dt>
+  <dd><span class="meter" style="--width: 8rem"></span><span>8rem</span></dd>
+</dl>
+
+{% anchor %}Terminology{% endanchor %}
+
+<p>Terminolgy for spacing is derived from Nathan Curtis' <a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Space in Design Systems</a>.</p>
+
+<h3 class="fizz-heading-3 fizz-stack-4">Inset</h3>
+
+<p><strong>Inset</strong> describes the space within an element and refers to a padding value. There are also several modifiers that describe how the space is distributed.</p>
+
+<ul>
+  <li><strong>Inset Square</strong> has equal padding on all four sides.</li>
+  <li><strong>Inset Squish</strong> has more padding on the sides than on the top and bottom.</li>
+  <li><strong>Inset Stretch</strong> has more padding on the top and bottom than the sides.</li>
+</ul>
+
+<h3 class="fizz-heading-3 fizz-stack-4">Stack</h3>
+
+<p><strong>Stack</strong> describes vertical space between the outside of elements and refers to a margin value. To avoid <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapsing margins</a>, Fizz only applies margins to the bottom or right of an element.</p>
+
+<h3 class="fizz-heading-3 fizz-stack-4">Inline</h3>
+
+<p><strong>Inline</strong> describes horizontal space between the outside of elements, again refering to a margin value.</p>
+
+<figure>
+  <div class="fizz-flex-row fizz-justify-center fizz-stack-8">
+    <img src="/assets/images/card.png" alt="Card without spacing highlights">
+    <img src="/assets/images/card-with-spacing.png" alt="Card with spacing highlights">
+  </div>
+  <figcaption class="fizz-text-center">Example: A card with and without spacing values highlighted</figcaption>
+</figure>
+
+<p>See <a href="https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62">Nathan's article</a> for more information.</p>
